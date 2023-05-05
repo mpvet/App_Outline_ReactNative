@@ -8,6 +8,8 @@ import { colors } from './src/styles';
 import { store, persistor } from './src/redux/store';
 
 import AppView from './src/modules/AppViewContainer';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import TeamEntry from './components/TeamEntry';
 
 export default function App() {
   return (
@@ -29,6 +31,14 @@ export default function App() {
   );
 }
 
+const App = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <TeamEntry />
+    </SafeAreaView>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -37,3 +47,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
 });
+
+export default App;
